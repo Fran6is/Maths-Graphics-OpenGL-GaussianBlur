@@ -13,9 +13,28 @@ Key Bindings:
 
 <hr>
 
-***Project Build***: x86 or all configuration 
+***Platform build***: x86
 
-***OpenGL***: GLSL4.3, OpenGL32.lib
+***OpenGL***: GLSL4.3, OpenGL32.lib, glad
+
+***Windowing***: GLFW
+
+***Math library***: GLM
+
+<hr>
+
+## CMake build (With CMake installed and command prompt opened in project's root directory)
+
+- Generate project files for x86 platform ( in this case win32 )
+```
+[Project root directory]: cmake . -B build -A Win32
+```
+- Build project
+```
+[Project root directory]: cmake --build build -t GaussianBlur
+[Project root directory]: cd build/Debug
+[Project root directory / build / Debug]: GaussianBlur
+```
 
 <hr>
 
