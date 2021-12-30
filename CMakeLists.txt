@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.1)
 
-project(OpenGL)
+project(GaussianBlur)
 
 set(CMAKE_CXX_STANDARD 11)
 
 configure_file(CMakeProjectMacros.h.in Project-macros/CMakeProjectMacros.h)
 
-add_executable(OpenGL
+add_executable(GaussianBlur
             Source/main.cpp 
             Source/glad.c 
             OpenGLTypes/Shader.cpp 
@@ -25,7 +25,7 @@ include_directories(Dependencies Dependencies/Include  "${PROJECT_SOURCE_DIR}/So
 
 find_library(GLFW_LIBRARY glfw3 glfw3.lib "${PROJECT_SOURCE_DIR}/Dependencies/Lib")
 
-target_link_libraries(OpenGL LINK_PUBLIC ${GLFW_LIBRARY} opengl32.lib)
+target_link_libraries(GaussianBlur LINK_PUBLIC ${GLFW_LIBRARY} opengl32.lib)
 
 
 
